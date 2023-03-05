@@ -2,22 +2,17 @@
 struct and supporting function to instantiate a single node generation adequacy problem.
 =#
 
+include("generator.jl")
+
 module SystemModule
 
 export SingleNodeSystem, lolp, lole, epns, compute_load_offset
 
-include("randomvar.jl")
-include("generator.jl")
-
-using .RandomVarModule
-# using .GeneratorModule:Generator
-using .GeneratorModule
-# using .RandomVarModule:RandomVariable
+using ..RandomVarModule
+using ..GeneratorModule
 
 using Formatting: printfmt
 
-# export RandomVarModule
-# export RandomVariable
 
 #=struct representing generic single bus system with two-state generators, and profiles for wind power and load.=#
 mutable struct SingleNodeSystem

@@ -1,13 +1,12 @@
 #= IEEE RTS Generation System =#
 
-module ieeerts
-include("randomvar.jl")
-include("generator.jl")
 include("system.jl")
 
-using .GeneratorModule
-using .SystemModule
-using .RandomVarModule
+module ieeerts
+
+using ..GeneratorModule
+using ..SystemModule
+using ..RandomVarModule
 
 using Formatting: printfmt
 

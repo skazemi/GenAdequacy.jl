@@ -1,7 +1,7 @@
+include("randomvar.jl")
+
 module GeneratorModule
 export Generator, available_capacity, power_trace, rv
-
-# include("randomvar.jl")
 
 using ..RandomVarModule
 using StatsKit
